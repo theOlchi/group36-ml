@@ -138,3 +138,9 @@ Time, Distance to Nearest Port, Speed Calculation, Historical Averages,
 Categorical Encoding, Lag Features, Interaction Features
 
 Accidentally, predicted DWT instead of position.
+
+# 17/10/2024
+
+trying to use prediction to submit on kaggle
+
+test data has limited features and i want to try using only the available ones.
