@@ -168,3 +168,11 @@ R-squared (Longitude): 5.025542245462589e-06
 
 according to chatgpt increasing test_size to 0.8 would lead to only 20% for training data which should be worse
 
+ensemble learning doesn't make sense in this project because the test data has only limited data
+alternatives: engineer proxy features that are only time based
+time-series models: ARIMA, LSTM, GRU
+Feature Reduction in the Rich Model: try training the rich model but only use the subset
+of features available in both training and test sets during testing.
+
+trying Rich Features for Training but Limited Features for Prediction
+resulted in a little worse score
