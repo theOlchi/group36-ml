@@ -141,6 +141,30 @@ Accidentally, predicted DWT instead of position.
 
 # 17/10/2024
 
-trying to use prediction to submit on kaggle
+trying to use the trained model and predict the test data to submit on kaggle
 
-test data has limited features and i want to try using only the available ones.
+the test data has limited features and i want to try using only the available ones.
+
+succeeded to defeat vt10 with submission-script-01.py
+
+Feature Engineering with Time-Based Features: Time-based features like hour,
+day_of_week, and month may not be enough on their own. \
+New ideas: Sailing velocity, Time intervals, Day of year, Maybe just use more data to train
+
+# 20/10/2024
+
+trying to beat
+Mean Squared Error (Latitude): 519.4488559216529
+R-squared (Latitude): 0.0023984139716545227
+Mean Squared Error (Longitude): 4701.99168975836
+R-squared (Longitude): 0.0005476448934124134
+
+changed submission-scrip-01 training data from 0.2 to 0.8
+resulted in:
+Mean Squared Error (Latitude): 523.9895568424715
+R-squared (Latitude): 0.001620880426807303
+Mean Squared Error (Longitude): 4722.364632518878
+R-squared (Longitude): 5.025542245462589e-06
+
+according to chatgpt increasing test_size to 0.8 would lead to only 20% for training data which should be worse
+
