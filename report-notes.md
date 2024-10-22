@@ -176,3 +176,9 @@ of features available in both training and test sets during testing.
 
 trying Rich Features for Training but Limited Features for Prediction
 resulted in a little worse score
+
+# 22/10/2024
+
+trying to beat
+553.8054 - val_loss: 521.5715
+loss: 4724.0361 - val_loss: 4688.6719
