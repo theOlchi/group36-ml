@@ -182,3 +182,18 @@ resulted in a little worse score
 trying to beat
 553.8054 - val_loss: 521.5715
 loss: 4724.0361 - val_loss: 4688.6719
+
+got it to run. however, resulted in worse score on kaggle.
+
+# 24/10/2024
+
+Suggested Next Steps:
+Incorporate richer features in training: Start by using vessel characteristics, distance-based features (to ports, routes), and lagged features (speed, direction).
+Derive synthetic features for the test set: Develop a model to predict derived features like speed and direction for the test set.
+Experiment with hybrid models: Try ensembling XGBoost, LSTMs, and other models.
+Advanced time-series methods: Explore TCNs, transformers, or graph-based methods if you feel comfortable implementing these architectures.
+
+went with a recursive prediction approach.
+trained a model to predict similar features like in ml04 (train set) for the test set based on existing columns.
+furthermore, combined 'CEU', 'DWT', 'GT', 'length', 'breadth', 'enginePower' on vesselId in test data
+and then trained the actual model with a rich feature set
