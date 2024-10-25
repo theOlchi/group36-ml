@@ -194,6 +194,29 @@ Experiment with hybrid models: Try ensembling XGBoost, LSTMs, and other models.
 Advanced time-series methods: Explore TCNs, transformers, or graph-based methods if you feel comfortable implementing these architectures.
 
 went with a recursive prediction approach.
+
+had an issue with portId. at first many to many.
+then, a unique port id but renamed due to multiple similar names from the merges.
+fixed it with proper renaming while merging.
+
 trained a model to predict similar features like in ml04 (train set) for the test set based on existing columns.
 furthermore, combined 'CEU', 'DWT', 'GT', 'length', 'breadth', 'enginePower' on vesselId in test data
 and then trained the actual model with a rich feature set
+
+further feature engineering suggestions: Advanced Lag Features, Port-Based Features, Vessel Grouping,
+Geographical Clustering, Temporal Patterns (Seasonality and Holidays, Daily Cycles)
+
+Handling the Test Set's Lack of Rich Features:
+Recursive Predictions with Historical Test Data: You could try using predictions made for previous time steps in the test set as features for future predictions. For example:
+After predicting latitude and longitude for a given time step, use those predictions as the input for predicting the next time step’s position.
+This recursive prediction approach can help mimic the way lag features were used in the training set.
+Blend Rich Features with Limited Features: If you want to balance using rich features during training but still ensure the model works with the test set’s limited features, consider building an ensemble of two models:
+Model 1: Uses only the features available in the test set (hour, day_of_week, etc.).
+Model 2: Uses all the rich features (like speed, direction, etc.).
+Average or stack the predictions from both models.
+
+Cross-Validation with Time-Series Split
+
+# 25/10/2024
+
+lstm combined performed by far the worst now.
